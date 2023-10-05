@@ -104,7 +104,7 @@ fun addDataToDatabase(
 
         var dbHandler: DBHandler = DBHandler(context)
         Text(
-            text = "Cadastro de cartão",
+            text = "Cadastro",
             color = PurpleGrey40, fontSize = 20.sp, fontWeight = FontWeight.Bold
         )
 
@@ -122,7 +122,7 @@ fun addDataToDatabase(
         TextField(
             value = courseDuration.value,
             onValueChange = { courseDuration.value = it },
-            placeholder = { Text(text = "Informe seu cvv") },
+            placeholder = { Text(text = "Informe seu email") },
             modifier = Modifier
                 .fillMaxWidth(),
             textStyle = TextStyle(color = Color.Black, fontSize = 15.sp),
@@ -133,7 +133,7 @@ fun addDataToDatabase(
         TextField(
             value = courseTracks.value,
             onValueChange = { courseTracks.value = it },
-            placeholder = { Text(text = "Informe a data de validade") },
+            placeholder = { Text(text = "Informe seu CPF") },
             modifier = Modifier
                 .fillMaxWidth(),
             textStyle = TextStyle(color = Color.Black, fontSize = 15.sp),
@@ -143,7 +143,7 @@ fun addDataToDatabase(
         TextField(
             value = courseDescription.value,
             onValueChange = { courseDescription.value = it },
-            placeholder = { Text(text = "Numero do seu cartão") },
+            placeholder = { Text(text = "Numero de telefone") },
             modifier = Modifier
                 .fillMaxWidth(),
             textStyle = TextStyle(color = Color.Black, fontSize = 15.sp),
@@ -152,6 +152,7 @@ fun addDataToDatabase(
         Spacer(modifier = Modifier.height(15.dp))
 
         Button(
+
             onClick = {
             dbHandler.addNewCourse(
                 courseName.value.text,
